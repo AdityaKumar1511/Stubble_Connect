@@ -92,7 +92,7 @@
   function setUnderlineTo(el) {
     if (!underline || !el) return;
     const rect = el.getBoundingClientRect();
-    const parentRect = el.parentElement.getBoundingClientRect();
+    const parentRect = underline.offsetParent.getBoundingClientRect();
     const left = rect.left - parentRect.left;
     underline.style.width = `${rect.width}px`;
     underline.style.left = `${left}px`;

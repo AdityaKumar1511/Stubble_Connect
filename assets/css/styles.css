@@ -258,6 +258,7 @@ p { margin: 0 0 16px; color: var(--muted-current); }
   background: linear-gradient(110deg, rgba(18,161,80,0.08), transparent);
 }
 .cta-box {
+  min-height: 300px;
   text-align: center;
   background: var(--surface-current);
   border: 1px solid var(--border-current);
