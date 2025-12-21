@@ -369,6 +369,12 @@ p { margin: 0 0 16px; color: var(--muted-current); }
   gap: 10px;
   flex-wrap: wrap;
 }
+.footer-links a {
+  margin-right: 20px;
+}
+.footer-links a:last-child {
+  margin-right: 0;
+}
 .footer a { color: var(--link); text-decoration: none; }
 
 /* Responsive (>=768px) */
