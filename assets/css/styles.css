@@ -84,7 +84,8 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 
 /* Navbar */
 .navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
   background: var(--bg-current);
