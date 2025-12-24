@@ -41,7 +41,7 @@ Stubble burning contributes to severe air pollution across India. This platform 
 
 ![Leaf Logo](assets/img/logo.png)
 
-Custom SVG logo designed to reflect sustainability and freshness.
+Custom PNG logo designed to reflect sustainability and freshness.
 
 ---
 
@@ -51,6 +51,17 @@ Custom SVG logo designed to reflect sustainability and freshness.
 🎓 B.Tech CSE @ NIT Patna  
 🔗 [GitHub](https://github.com/AdityaKumar1511)  
 📬 adityakumar1511@gmail.com
+**Rudra Pratap**
+🎓 B.Tech CSE @ NIT Patna
+🔗 [GitHub](https://github.com/rudraaa-pratap)
+📬 rudranonhar@gmail.com
+**Sweety Gupta**
+🎓 B.Tech CSE @ NIT Patna
+🔗 [GitHub](https://github.com/sg293307)
+📬 sg293307@gmail.com
+
+
+
 
 ---
 
