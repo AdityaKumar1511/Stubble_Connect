@@ -84,6 +84,7 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 
 /* Navbar */
 .navbar {
+  padding-top: 30px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -109,8 +110,9 @@ p { margin: 0 0 16px; color: var(--muted-current); }
   text-decoration: none;
   color: var(--text-current);
   font-weight: 700;
+  font-size: 30px;
 }
-.nav-logo img { width: 28px; height: 28px; }
+.nav-logo img { width: 50px; height: 50px; }
 
 .nav-links {
   display: flex;
@@ -415,4 +417,20 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 :focus-visible {
   outline: 2px solid var(--outline);
   outline-offset: 2px;
+}
+#translateToHindi, #translateToEnglish {
+  margin-right: 10px;
+}
+#translateToHindi, #translateToEnglish {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#translateToHindi, #translateToEnglish:hover {
+  background: #45a049;
 }

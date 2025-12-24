@@ -27,6 +27,8 @@
         <a class="nav-link" href="#impact" data-scroll>Impact</a>
         <a class="nav-link" href="#cta" data-scroll>Get Started</a>
         <div class="nav-actions">
+          <button id="translateToHindi">Translate to Hindi</button>
+          <button id="translateToEnglish">Back to English</button>
           <button id="themeToggle" class="btn btn-secondary" aria-label="Toggle dark mode">Dark Mode</button>
           <a class="btn btn-primary" href="farmer.html">I'm a Farmer</a>
           <a class="btn btn-outline" href="buyer.html">I'm a Buyer</a>
@@ -149,5 +151,31 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  
+  <div id="google_translate_element" style="display:none;"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'en', includedLanguages: 'hi,en'},
+        'google_translate_element'
+      );
+    }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <script>
+    function triggerTranslation(lang) {
+      const select = document.querySelector("#google_translate_element select");
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+      }
+    }
+  
+    document.getElementById("translateToHindi").addEventListener("click", () => triggerTranslation("hi"));
+    document.getElementById("translateToEnglish").addEventListener("click", () => triggerTranslation("en"));
+  </script>
 </body>
 </html>
