@@ -50,15 +50,21 @@ Custom PNG logo designed to reflect sustainability and freshness.
 **Aditya Kumar**  
 🎓 B.Tech CSE @ NIT Patna  
 🔗 [GitHub](https://github.com/AdityaKumar1511)  
-📬 adityakumar1511@gmail.com
-**Rudra Pratap**
-🎓 B.Tech CSE @ NIT Patna
-🔗 [GitHub](https://github.com/rudraaa-pratap)
-📬 rudranonhar@gmail.com
-**Sweety Gupta**
-🎓 B.Tech CSE @ NIT Patna
-🔗 [GitHub](https://github.com/sg293307)
-📬 sg293307@gmail.com
+📬 adityakumar1511@gmail.com <br>
+**Rudra Pratap**<br>
+🎓 B.Tech CSE @ NIT Patna <br>
+🔗 [GitHub](https://github.com/rudraaa-pratap)<br>
+📬 rudranonhar@gmail.com <br>
+**Sweety Gupta**<br>
+🎓 B.Tech CSE @ NIT Patna<br>
+🔗 [GitHub](https://github.com/sg293307)<br>
+📬 sg293307@gmail.com <br>
+**Akrati Singh**<br>
+🎓 B.Tech CSE @ NIT Patna<br>
+🔗 [GitHub](https://github.com/Akratigithu)<br>
+📬 akratisinghaniya1098@gmail.com
+
+
 
 
 
