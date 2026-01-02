@@ -138,9 +138,8 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 }
 
 .nav-toggle {
-  display: flex !important;
-  flex-direction: column !important;
-  width: 40px; height: 40px;
+  display: none;
+  width: 45px; height: 50px;
   border: 1px solid var(--border-current);
   background: var(--surface-current);
   border-radius: 8px;
@@ -148,7 +147,6 @@ p { margin: 0 0 16px; color: var(--muted-current); }
   justify-content: center;
   gap: 4px;
   transition: background var(--transition), border-color var(--transition);
-  box-sizing: border-box !important;
 }
 .nav-toggle .bar {
   display: inline-block;
