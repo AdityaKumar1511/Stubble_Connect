@@ -138,7 +138,8 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 }
 
 .nav-toggle {
-  display: none;
+  display: flex !important;
+  flex-direction: column !important;
   width: 40px; height: 40px;
   border: 1px solid var(--border-current);
   background: var(--surface-current);
@@ -147,6 +148,7 @@ p { margin: 0 0 16px; color: var(--muted-current); }
   justify-content: center;
   gap: 4px;
   transition: background var(--transition), border-color var(--transition);
+  box-sizing: border-box !important;
 }
 .nav-toggle .bar {
   display: inline-block;
@@ -198,7 +200,7 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 
 /* Hero */
 .hero {
-  padding-top: 120px; /* Account for sticky navbar */
+  padding-top: 150px; /* Account for sticky navbar */
 }
 .hero-grid {
   display: grid;
@@ -397,21 +399,44 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 
 /* Mobile Navbar (<=767px) */
 @media (max-width: 767px) {
-  .nav-toggle { display: inline-flex; }
-  .nav-links {
-    position: absolute;
-    top: 56px; right: 16px; left: 16px;
-    background: var(--bg-current);
-    border: 1px solid var(--border-current);
-    border-radius: 12px;
-    flex-direction: column;
-    padding: 8px;
-    box-shadow: var(--shadow);
-    display: none;
+
+  .nav-toggle {
+    display: block;
   }
-  .nav-links.open { display: flex; }
-  .nav-actions { margin-top: 4px; }
+
+  .nav-links {
+    position: fixed;
+    top: 122px; /* navbar height */
+    left: 0;
+    right: 0;
+
+    background: var(--bg-current);
+    border-top: 1px solid var(--border-current);
+
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 16px;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .nav-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
+
 
 /* Focus styles */
 :focus-visible {
