@@ -117,7 +117,7 @@ p { margin: 0 0 16px; color: var(--muted-current); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 17px;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
