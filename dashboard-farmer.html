@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <div class="logo-small"><i class="fas fa-leaf"></i></div>
+        <nav class="side-nav">
+            <a href="#" class="nav-item active" id="btn-upload" onclick="switchFarmerTab('upload')"><i class="fas fa-plus-circle"></i></a>
+            <a href="#" class="nav-item" id="btn-history" onclick="switchFarmerTab('history')"><i class="fas fa-history"></i></a>
+            <a href="#" class="nav-item" id="btn-earnings" onclick="switchFarmerTab('earnings')"><i class="fas fa-wallet"></i></a>
+            <a href="index.html" class="nav-item logout"><i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="dash-header fade-up">
+            <div class="welcome-text"><h1>Namaste, Farmer! 🙏</h1><p>Manage your stubble & earnings.</p></div>
+            <div class="profile-pill"><div class="credits-badge">🪙 500 Credits</div><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile"></div>
+        </header>
+
+        <section id="view-upload" class="dashboard-view">
+            <div class="glass-form-card fade-up delay-100">
+                <h2 class="form-title">New Stubble Listing</h2>
+                <form id="listing-form">
+                    <div class="upload-zone" id="drop-zone">
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                        <div class="upload-content"><i class="fas fa-cloud-upload-alt"></i><h3>Upload Photo</h3></div>
+                        <img id="preview-img" class="hidden" src="" alt="Preview">
+                    </div>
+                    <div class="input-grid">
+                        <div class="input-group"><label>Area (Acres)</label><div class="input-wrapper"><i class="fas fa-ruler"></i><input type="number" id="area" placeholder="5" required></div></div>
+                        <div class="input-group"><label>Price (₹)</label><div class="input-wrapper"><i class="fas fa-rupee-sign"></i><input type="number" id="price" placeholder="2000" required></div></div>
+                    </div>
+                    <button type="submit" class="btn-submit">Publish Listing</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="view-history" class="dashboard-view hidden">
+            <h2 class="section-title">My History</h2>
+            <div class="history-list"></div>
+        </section>
+
+        <section id="view-earnings" class="dashboard-view hidden">
+            <div class="wallet-card fade-up">
+                <div class="wallet-header"><h3>Total Earnings</h3><i class="fas fa-wallet"></i></div>
+                <div class="wallet-balance">₹ 12,500</div>
+            </div>
+            <h3 style="margin-top:20px">Transactions</h3>
+            <div class="transaction-list"></div>
+        </section>
+    </main>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="check-anim"><i class="fas fa-check"></i></div>
+            <h3>Listed Successfully!</h3>
+            <p>Buyers nearby have been notified.</p>
+            <button onclick="closeModal()" class="btn-close">Okay</button>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
