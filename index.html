@@ -1,131 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ParaliMukti: The 'Uber for Farm Waste'. Connect farmers with buyers to stop stubble burning.">
-    <title>Stubble-Connect | Turn Stubble into Gold</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stubble-Connect | Transforming Agricultural Waste into Value</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="icon" href="assets/img/logo.png" type="image/png"/>
 </head>
-<body class="light-mode">
+<body>
+  <!-- Fixed Navbar (shared across pages) -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/img/logo.png" alt="Stubble-Connect logo"/>
+        <span>Stubble-Connect</span>
+      </a>
 
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
 
-    <nav class="glass-nav">
-        <div class="logo">
-            <i class="fas fa-leaf"></i> Stubble<span class="highlight">Connect</span>
+      <nav class="nav-links">
+        <a class="nav-link active" href="#hero" data-scroll>Home</a>
+        <a class="nav-link" href="#how-it-works" data-scroll>How It Works</a>
+        <a class="nav-link" href="#benefits" data-scroll>Benefits</a>
+        <a class="nav-link" href="#impact" data-scroll>Impact</a>
+        <a class="nav-link" href="#cta" data-scroll>Get Started</a>
+        <div class="nav-actions">
+          <button id="translateToHindi">Translate to Hindi</button>
+          <button id="translateToEnglish">Back to English</button>
+          <button id="themeToggle" class="btn btn-secondary" aria-label="Toggle dark mode">Dark Mode</button>
+          <a class="btn btn-primary" href="farmer.html">I'm a Farmer</a>
+          <a class="btn btn-outline" href="buyer.html">I'm a Buyer</a>
         </div>
-        <div class="nav-links">
-            <button id="lang-toggle" class="nav-icon-btn" aria-label="Switch Language">
-                <i class="fas fa-language"></i> <span>हिंदी</span>
-            </button>
-            <button id="theme-toggle" class="nav-icon-btn" aria-label="Toggle Dark Mode">
-                <i class="fas fa-moon"></i>
-            </button>
-            <a href="login.html" class="nav-cta" data-i18n="loginBtn">Login</a>
-        </div>
-    </nav>
+      </nav>
+      <div class="nav-underline"></div>
+    </div>
+  </header>
 
-    <header class="hero">
-        <div class="hero-content hidden-el">
-            <div class="badge">🌱 Zero Burn, Max Earn</div>
-            <h1 data-i18n="heroTitle">
-                Turn Stubble into <br> <span class="gradient-text">Gold</span>
-            </h1>
-            <p data-i18n="heroSub">
-                The first AI-powered marketplace connecting farmers with biomass industries. 
-                Stop burning, start earning today.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="dashboard-farmer.html" class="btn btn-farmer">
-                    <div class="icon-wrapper"><i class="fas fa-tractor"></i></div>
-                    <div class="text-wrapper">
-                        <span class="small-text">I am a</span>
-                        <span class="main-text">Farmer</span>
-                    </div>
-                    <div class="shine"></div> </a>
-                
-                <a href="dashboard-buyer.html" class="btn btn-buyer">
-                    <div class="icon-wrapper"><i class="fas fa-industry"></i></div>
-                    <div class="text-wrapper">
-                        <span class="small-text">I am a</span>
-                        <span class="main-text">Buyer</span>
-                    </div>
-                    <div class="shine"></div>
-                </a>
-            </div>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Transforming Agricultural Waste into Value</h1>
+          <p>Turn crop stubble into income, not smoke. Connect with industries that need your stubble. Earn money, reduce pollution, and gain carbon credits—all while protecting the environment.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="farmer.html">I'm a Farmer</a>
+            <a class="btn btn-outline" href="buyer.html">I'm a Buyer</a>
+          </div>
         </div>
-
-        <div class="hero-visual hidden-el delay-200">
-            <div class="glass-card float-anim">
-                <div class="visual-icon fire"><i class="fas fa-fire-alt"></i></div>
-                <div class="arrow-down">⬇</div>
-                <div class="visual-icon leaf"><i class="fas fa-leaf"></i></div>
-                <p>Convert Pollution <br>to Power</p>
-            </div>
+        <div class="hero-media">
+          <img src="assets/img/hero-stubble.jpg" alt="Field with crop stubble"/>
         </div>
-    </header>
-
-    <section class="stats-section hidden-el">
-        <div class="stat-box">
-            <h2 class="counter" data-target="35">0</h2><span>%</span>
-            <p>Pollution Reduced</p>
-        </div>
-        <div class="divider"></div>
-        <div class="stat-box">
-            <h2 class="counter" data-target="1500">0</h2><span>+</span>
-            <p>Farmers Joined</p>
-        </div>
-        <div class="divider"></div>
-        <div class="stat-box">
-            <h2 class="counter" data-target="50">0</h2><span>Lakh</span>
-            <p>Credits Generated</p>
-        </div>
+      </div>
     </section>
 
-    <section class="steps-section">
-        <h2 class="section-title hidden-el" data-i18n="solTitle">How It Works</h2>
-        
-        <div class="cards-grid">
-            <div class="feature-card hidden-el delay-100">
-                <div class="card-icon"><i class="fas fa-camera"></i></div>
-                <h3 data-i18n="step1Title">1. Scan</h3>
-                <p data-i18n="step1Desc">Take a photo of your field. AI calculates stubble amount.</p>
-            </div>
-
-            <div class="feature-card hidden-el delay-200">
-                <div class="card-icon"><i class="fas fa-handshake"></i></div>
-                <h3 data-i18n="step2Title">2. Match</h3>
-                <p data-i18n="step2Desc">Get instantly matched with nearby paper mills & plants.</p>
-            </div>
-
-            <div class="feature-card hidden-el delay-300">
-                <div class="card-icon"><i class="fas fa-truck-moving"></i></div>
-                <h3 data-i18n="step3Title">3. Pickup</h3>
-                <p data-i18n="step3Desc">Logistics partners arrive at your farm for collection.</p>
-            </div>
-
-            <div class="feature-card special-card hidden-el delay-400">
-                <div class="card-icon"><i class="fas fa-wallet"></i></div>
-                <h3 data-i18n="step4Title">4. Earn</h3>
-                <p data-i18n="step4Desc">Get paid instantly + Earn verified Carbon Credits.</p>
-            </div>
+    <!-- How It Works -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="cards three">
+          <div class="card">
+            <div class="card-icon">1</div>
+            <h3>Farmers list stubble</h3>
+            <p>Upload field details, location, and quantity. Get instant payout estimates.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">2</div>
+            <h3>Industries browse</h3>
+            <p>View available stubble on a map, filter by quantity and distance.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">3</div>
+            <h3>Optimized pickup</h3>
+            <p>Smart route optimization for efficient collection and delivery.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <p>Made with ❤️ by team "THE 418 TEAPOTS" &copy; 2026 Stubble-Connect</p>
-    </footer>
+    <!-- Benefits -->
+    <section id="benefits" class="section alt">
+      <div class="container">
+        <h2>Benefits for everyone</h2>
+        <div class="cards three">
+          <div class="card benefit">
+            <div class="benefit-icon">₹</div>
+            <h3>Additional income</h3>
+            <p>Farmers earn money from what was previously waste material.</p>
+          </div>
+          <div class="card benefit">
+            <div class="benefit-icon">🍃</div>
+            <h3>Reduce pollution</h3>
+            <p>Eliminate harmful stubble burning and improve air quality.</p>
+          </div>
+          <div class="card benefit">
+            <div class="benefit-icon">▮▮▮</div>
+            <h3>Carbon credits</h3>
+            <p>Earn verified carbon credits for environmental impact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/script.js"></script>
+    <!-- Impact -->
+    <section id="impact" class="section">
+      <div class="container">
+        <h2>Impact</h2>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <h3>Pollution reduction</h3>
+            <p>Redirecting stubble away from burning helps lower particulate matter and improves regional air quality.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Farmer income</h3>
+            <p>Transparent payouts per acre with simple tools to estimate earnings and carbon impact.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Local supply chains</h3>
+            <p>AI-optimized logistics connect nearby farms with buyers to reduce transport costs and emissions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta">
+      <div class="container cta-box">
+        <h2>Ready to make a difference?</h2>
+        <p>Join the movement to transform agricultural waste into valuable resources.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="farmer.html">Start as Farmer</a>
+          <a class="btn btn-outline" href="buyer.html">Start as Buyer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2025 Stubble-Connect. Transforming agriculture for a sustainable future.</div>
+      <div class="footer-links">
+        <a href="#hero" data-scroll>Home</a>
+        <a href="#how-it-works" data-scroll>How It Works</a>
+        <a href="#benefits" data-scroll>Benefits</a>
+        <a href="#impact" data-scroll>Impact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  
+  <div id="google_translate_element" style="display:none;"></div>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {pageLanguage: 'en', includedLanguages: 'hi,en'},
+        'google_translate_element'
+      );
+    }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <script>
+    function triggerTranslation(lang) {
+      const select = document.querySelector("#google_translate_element select");
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+      }
+    }
+  
+    document.getElementById("translateToHindi").addEventListener("click", () => triggerTranslation("hi"));
+    document.getElementById("translateToEnglish").addEventListener("click", () => triggerTranslation("en"));
+  </script>
 </body>
 </html>
